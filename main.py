@@ -73,7 +73,11 @@ def process_queries(query_manager):
         # Análises
         print("\nRealizando análises...")
         query_manager.average_medications_prescribed()
-        query_manager.validate_prescription("aba", "cbaa")
+                # Exemplos de uso para o Problema 9:
+        query_manager.validate_prescription("aba", "cbaa")  # True
+        query_manager.validate_prescription("aa", "b")  # False
+        query_manager.validate_prescription("aa", "aab")  # True
+        query_manager.validate_prescription("a", "b")  # False
         query_manager.visualize_attendances(["2024-11-23", "2024-11-23", "2024-11-22"])
 
         return True
